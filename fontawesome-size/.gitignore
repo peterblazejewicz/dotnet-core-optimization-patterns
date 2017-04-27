@@ -289,3 +289,7 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+# scaffolded or copied assets
+wwwroot/fonts
+wwwroot/css
