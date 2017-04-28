@@ -1,5 +1,9 @@
-// custom Bootstrap build
-@import "../node_modules/bootstrap/scss/bootstrap";
+// Let's build custom BS4 theme
+// using limited set of CSS components 
+// and theme from upcoming v4 Bootswatch themes
+@import "variables";
+@import "bootstrap";
+@import "bootswatch";
 // your own code
 body {
     min-height: 100%;
