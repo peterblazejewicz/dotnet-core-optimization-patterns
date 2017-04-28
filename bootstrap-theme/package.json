@@ -1,7 +1,24 @@
 {
-  "dependencies": {
-    "bootstrap": "4.0.0-alpha.6",
-    "font-awesome": "^4.7.0",
-    "fontawesome": "^4.7.2"
-  }
+    "name": "bootstrap-theme",
+    "private": true,
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "npm run build && dotnet run",
+        "build": "npm run clean && npm run scss",
+        "clean": "rimraf wwwroot/css",
+        "scss": "node-sass --output wwwroot/css --source-map true --output-style expanded --source-map-contents scss/",
+        "postinstall": "dotnet restore"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "bootstrap": "4.0.0-alpha.6",
+        "font-awesome": "^4.7.0"
+    },
+    "devDependencies": {
+        "node-sass": "^4.5.2",
+        "rimraf": "^2.6.1"
+    }
 }

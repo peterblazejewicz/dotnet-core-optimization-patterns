@@ -1,0 +1,8 @@
+// custom Bootstrap build
+@import "../node_modules/bootstrap/scss/bootstrap";
+// your own code
+body {
+    min-height: 100%;
+    position: relative;
+    padding: 5rem 0 2rem;
+}
