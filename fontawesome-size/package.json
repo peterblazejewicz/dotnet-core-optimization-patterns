@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean:fonts": "rimraf wwwroot/fonts",
-    "copy:fonts": "copyfiles -u 3 node_modules/font-awesome/fonts/*.* wwwroot/fonts",
-    "scss": "node-sass --output wwwroot/css --source-map true --output-style expanded --source-map-contents scss/"
+    "dev": "npm run build && dotnet run",
+    "build": "npm run clean && npm run copy && npm run scss",
+    "clean": "rimraf wwwroot/fonts",
+    "copy": "copyfiles -u 3 node_modules/font-awesome/fonts/*.* wwwroot/fonts",
+    "scss": "node-sass --output wwwroot/css --source-map true --output-style expanded --source-map-contents scss/",
+    "postinstall": "dotnet restore"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +19,7 @@
   },
   "devDependencies": {
     "copyfiles": "^1.2.0",
-    "node-sass": "^4.5.2"
+    "node-sass": "^4.5.2",
+    "rimraf": "^2.6.1"
   }
 }
