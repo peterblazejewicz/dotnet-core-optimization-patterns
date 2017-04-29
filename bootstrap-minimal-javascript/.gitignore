@@ -292,3 +292,4 @@ __pycache__/
 
 # Transpiled and generated content
 wwwroot/css
+wwwroot/js
