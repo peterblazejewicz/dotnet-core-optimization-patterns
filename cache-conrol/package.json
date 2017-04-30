@@ -4,9 +4,11 @@
     "version": "1.0.0",
     "scripts": {
         "dev": "npm run build && dotnet run",
-        "build": "npm run clean && npm run scss",
+        "build": "npm run clean && npm run scss && npm run copy:files",
+        "build:webpack": "webpack --config webpack.config.js",
         "clean": "rimraf wwwroot/css",
-        "scss": "node-sass --output wwwroot/css --source-map true --output-style expanded --source-map-contents scss/",
+        "copy:files": "copyfiles -u 1 assets/*.ico assets/*.txt wwwroot/",
+        "scss": "node-sass --output wwwroot/css --source-map true --output-style expanded --source-map-contents assets/scss/",
         "postinstall": "dotnet restore"
     },
     "keywords": [],
@@ -18,7 +20,10 @@
         "font-awesome": "^4.7.0"
     },
     "devDependencies": {
+        "copyfiles": "^1.2.0",
+        "html-webpack-plugin": "^2.28.0",
         "node-sass": "^4.5.2",
-        "rimraf": "^2.6.1"
+        "rimraf": "^2.6.1",
+        "webpack": "^2.4.1"
     }
 }
