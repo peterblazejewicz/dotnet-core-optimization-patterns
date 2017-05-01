@@ -291,4 +291,4 @@ __pycache__/
 *.xsd.cs
 
 # Transpiled and generated content
-wwwroot/css
+wwwroot/
