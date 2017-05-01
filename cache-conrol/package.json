@@ -6,7 +6,7 @@
         "dev": "npm run build && dotnet run",
         "build": "npm run clean && npm run scss && npm run copy:files",
         "build:webpack": "webpack --config webpack.config.js",
-        "clean": "rimraf wwwroot/css",
+        "clean": "rimraf wwwroot",
         "copy:files": "copyfiles -u 1 assets/*.ico assets/*.txt wwwroot/",
         "scss": "node-sass --output wwwroot/css --source-map true --output-style expanded --source-map-contents assets/scss/",
         "postinstall": "dotnet restore"
