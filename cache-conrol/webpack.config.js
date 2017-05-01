@@ -10,9 +10,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Cache Control',
-      filename: path.join(__dirname, 'wwwroot/index.html'),
-      template: path.join(__dirname, 'assets/index.template.html')
+        hash: true,
+        title: 'Cache Control',
+        filename: path.join(__dirname, 'wwwroot/index.html'),
+        template: path.join(__dirname, 'assets/index.template.html')
     }),
     new webpack.ProvidePlugin({
         $: 'jquery',
